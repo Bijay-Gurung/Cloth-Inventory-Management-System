@@ -134,10 +134,43 @@ $db->close();
 ?>
 
 </div>
+
+<div class='buttons'>
 <form method="POST">
     <button type="submit" id="clear" name="clear">Clear</button>
 </form>
+
+<form method="POST">
+    <button type="submit" id="total" name ="total">Total</button>
+</form>
+</div>
+
 </section>
+
+<?php
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'ims';
+
+$db = new mysqli($db_host,$db_user,$db_pass,$db_name);
+if($db->connect_error){
+    die("Connection failed: " . $db->connect_error);
+}
+
+if(isset($_POST["total"])) {
+    $sql = "SELECT SUM(price) AS total FROM inventory";
+    $result = $db->query($sql);
+    if($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $totalPrice = $row['total'];
+        echo "<script>alert('Total Price: Npr " . $totalPrice . "');</script>";
+    } else {
+        echo "No items found";
+    }
+}
+?>
+
 <script src="server.js"></script>
 <script src="https://kit.fontawesome.com/4f9d824da5.js" crossorigin="anonymous"></script>
 </body>
