@@ -102,6 +102,21 @@ function sendMessageToWebSocketServer($event, $data) {
         <option>Crop T-shirt</option>
         <option>Tops</option>
         <option>Jumpsuit</option>
+        <option>Pant</option>
+        <option>Two Piece</option>
+        <option>Leggins</option>
+        <option>Lelan Pant</option>
+        <option>Outer</option>
+        <option>Formal Shirt</option>
+        <option>Dress</option>
+        <option>Belly Jeans</option>
+        <option>Shirt</option>
+        <option>String Dress</option>
+        <option>Belt</option>
+        <option>Belly Pant</option>
+        <option>Jacket</option>
+        <option>Bodycon</option>
+        <option>Quarter-Leggins</option>
     </select>
 
     <input type="text" placeholder="Cloth Code" id="clothName" name="clothName" required>
