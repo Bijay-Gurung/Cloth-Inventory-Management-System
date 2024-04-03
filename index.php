@@ -117,6 +117,7 @@ function sendMessageToWebSocketServer($event, $data) {
         <option>Jacket</option>
         <option>Bodycon</option>
         <option>Quarter-Leggins</option>
+        <option>Shorts</option>
     </select>
 
     <input type="text" placeholder="Cloth Code" id="clothName" name="clothName" required>
